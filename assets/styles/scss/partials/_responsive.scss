@@ -1,0 +1,12 @@
+$widths: (
+    xs: 320px,
+    sm: 468px,
+    md: 765px,
+    lg: 1024px,
+);
+
+@mixin responsiveMedia($width) {
+    @media screen and(min-width: map-get($widths, $width)) {
+        @content;
+    }
+}

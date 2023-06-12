@@ -1,0 +1,47 @@
+.floating_input {
+    position: relative;
+    font-size: 1rem;
+    background: var(--text-light);
+
+    .input {
+        width: 100%;
+        color: inherit;
+        font-size: inherit;
+        background: transparent;
+        padding: 0.5em 1em;
+        border: 1px solid var(--primary-color);
+        border-radius: 0.25rem;
+        transition: 0.25s ease-in-out box-shadow;
+        &[type="password"] {
+            padding-right: 2em;
+        }
+        &::file-selector-button {
+            background: var(--primary-color) !important;
+            color: var(--text-light);
+            border-radius: 0.25rem;
+        }
+        &::placeholder {
+            opacity: 0;
+        }
+        &:is(:focus) {
+            box-shadow: 0 0 0 0.25em var(--primary-color--light);
+        }
+        &:is(:focus, :not(:placeholder-shown)) + .label {
+            top: 0;
+            font-size: 0.75em;
+            padding: 0 0.5em;
+            color: var(--primary-color);
+        }
+    }
+
+    .label {
+        position: absolute;
+        background: inherit;
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+        transition: 0.15s ease-in-out background, 0.15s ease-in-out top, 0.15s ease-in-out color;
+        cursor: text;
+        text-transform: capitalize;
+    }
+}

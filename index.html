@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card Generator</title>
+        <link rel="stylesheet" href="http://localhost:100/fontawesome6/css/all.min.css">
+        <link rel="stylesheet" href="assets/styles/css/main.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                <h3>Logo</h3>
+            </div>
+
+            <div class="btn-grp">
+                <button class="btn" data-open data-target="aside">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                <button class="btn" data-color>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+        <aside>
+            <div class="sidebar">
+                <div class="top">
+                    <button class="btn" data-close data-target="aside">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="body">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="wrapper">
+                <form action="" method="POST">
+                    <h3 class="title">
+                        Input Your Information
+                    </h3>
+                    <div class="fields">
+
+                    </div>
+                    <button class="btn btn-primary-color" type="submit">
+                        <i class="fas fa-binoculars"></i>
+                        Preview
+                    </button>
+                </form>
+                <div class="preview-wrapper open">
+                    <div class="preview">
+                        <button class="btn" data-close data-target=".preview-wrapper">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>
+                        <h2>
+                            Preview Contents Comes Here
+                        </h2>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p class="copyright">&copy; X-Team&trade; <span class="year"></span></p>
+        </footer>
+
+        <script src="http://localhost:100/fontawesome6/js/all.min.js"></script>
+        <script src="assets/scripts/main.js"></script>
+
+    </body>
+
+</html>

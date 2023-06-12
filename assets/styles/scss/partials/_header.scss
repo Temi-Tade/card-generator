@@ -1,0 +1,16 @@
+header {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    background: var(--primary-color);
+    box-shadow: var(--shadow);
+    color: var(--text-light);
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    z-index: 10;
+
+    .btn {
+        border: 1px solid var(--text-dark);
+    }
+}
