@@ -24,6 +24,9 @@ main {
             .btn {
                 justify-self: end;
             }
+            #validitionMsg{
+                color: var(--danger);
+            }
         }
 
         .preview-wrapper {

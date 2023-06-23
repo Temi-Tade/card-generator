@@ -41,8 +41,15 @@ aside {
             height: 100%;
             overflow-y: auto;
             padding: 1rem;
-            a {
+            .link {
                 display: block;
+                font-size: 1.2rem;
+                color: var(--text-light);
+                margin-bottom: 1rem;
+                transition: .25s ease-in-out color;
+                &:hover{
+                    color: var(--primary-color--dark);
+                }
             }
         }
     }
