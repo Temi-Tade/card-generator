@@ -2,6 +2,8 @@ const yearElement = document.querySelector(".year");
 const fieldsElement = document.querySelector(".fields");
 const closeBtn = document.querySelectorAll("[data-close]");
 const openBtn = document.querySelectorAll("[data-open]");
+const user_details = document.querySelector("#user_details")
+const valMsgElement = document.querySelector("#validitionMsg")
 
 let fields = [
 	{
@@ -24,6 +26,11 @@ let fields = [
 		label: "Email",
 		type: "email",
 	},
+	{
+		id: "passport",
+		label: "Passport Photograph",
+		type: "file"
+	}
 ];
 
 let year = new Date().getFullYear();
@@ -31,7 +38,7 @@ yearElement.textContent = year;
 
 fields.forEach((field) => {
 	fieldsElement.innerHTML += `<div class="floating_input">
-    <input type="text" class="input" type="${field.type}" id="${field.id}" placeholder="a">
+    <input class="input" type="${field.type}" id="${field.id}" placeholder="${field.label}">
     <label for="${field.id}" class="label">${field.label}</label>
     </div>`;
 });
@@ -47,3 +54,4 @@ let handleOpen = function () {
 
 closeBtn.forEach((btn) => btn.addEventListener("click", handleClose));
 openBtn.forEach((btn) => btn.addEventListener("click", handleOpen));
+

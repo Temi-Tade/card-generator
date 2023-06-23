@@ -42,7 +42,7 @@
         </aside>
         <main>
             <section class="wrapper">
-                <form action="" method="POST">
+                <form action="" method="POST" id="user_details" onsubmit="event.preventDefault()">
                     <h3 class="title">
                         Input Your Information
                     </h3>
@@ -53,7 +53,9 @@
                         <i class="fas fa-binoculars"></i>
                         Preview
                     </button>
+                    <small id="validitionMsg"></small>
                 </form>
+
                 <div class="preview-wrapper open">
                     <div class="preview">
                         <button class="btn" data-close data-target=".preview-wrapper">
@@ -71,7 +73,7 @@
         </footer>
 
         <script src="assets/scripts/main.js"></script>
-
+        <script src="assets/scripts/form.js"></script>
     </body>
 
 </html>
