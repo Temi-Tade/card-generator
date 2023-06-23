@@ -38,10 +38,12 @@ fields.forEach((field) => {
 
 let handleClose = function () {
 	let target = document.querySelector(this.dataset.target);
+	document.body.classList.remove("overflow-hidden");
 	target.classList.remove("open");
 };
 let handleOpen = function () {
 	let target = document.querySelector(this.dataset.target);
+	document.body.classList.add("overflow-hidden");
 	target.classList.add("open");
 };
 
