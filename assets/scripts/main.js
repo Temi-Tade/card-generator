@@ -4,6 +4,8 @@ const closeBtn = document.querySelectorAll("[data-close]");
 const openBtn = document.querySelectorAll("[data-open]");
 const user_details = document.querySelector("#user_details")
 const valMsgElement = document.querySelector("#validitionMsg")
+const previewWrap = document.querySelector(".preview-wrapper")
+const card = document.querySelector("#card")
 
 let fields = [
 	{
@@ -12,19 +14,24 @@ let fields = [
 		type: "text",
 	},
 	{
-		id: "lastname",
+		id: "lastname", 
 		label: "Last Name",
 		type: "text",
 	},
 	{
 		id: "phonenumber",
 		label: "Phone Number",
-		type: "text",
+		type: "tel",
 	},
 	{
 		id: "email",
 		label: "Email",
 		type: "email",
+	},
+	{
+		id: "skills",
+		label: "Skills",
+		type: "text"
 	},
 	{
 		id: "passport",
@@ -37,10 +44,17 @@ let year = new Date().getFullYear();
 yearElement.textContent = year;
 
 fields.forEach((field) => {
-	fieldsElement.innerHTML += `<div class="floating_input">
-    <input class="input" type="${field.type}" id="${field.id}" placeholder="${field.label}">
-    <label for="${field.id}" class="label">${field.label}</label>
-    </div>`;
+	if (field.type === "file") {
+		fieldsElement.innerHTML += `<div class="floating_input">
+    	<input class="input" type="${field.type}" id="${field.id}" placeholder="${field.label}" accept=".jpg,.png">
+		<label for="${field.id}" class="label">${field.label}</label>
+    	</div>`;
+	} else {
+		fieldsElement.innerHTML += `<div class="floating_input">
+    	<input class="input" type="${field.type}" id="${field.id}" placeholder="${field.label}"></input>
+		<label for="${field.id}" class="label">${field.label}</label>
+    	</div>`;
+	}
 });
 
 let handleClose = function () {
